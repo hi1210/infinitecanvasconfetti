@@ -1,20 +1,24 @@
 // ==UserScript==
 // @name         Infinite Canvas Confetti
-// @version      0.0.1
+// @namespace    http://tampermonkey.net/
+// @version      0.1
 // @author       @hi1210
 // @description  Infinite canvas confetti for your enjoyment
-// @match        *://canvas.*.edu/*
-// ==UserScript==
+// @include      *canvas.*.edu*
+// @require      https://cdn.jsdelivr.net/npm/canvas-confetti@1.7.0/dist/confetti.browser.min.js
+// @grant        none
+// ==/UserScript==
 
 (function() {
-    // When the user clicks the mouse, create a confetti
+    'use strict';
+    // When the user clicks the mouse, create a confetti at the mouse position
     document.addEventListener('mousedown', function(e) {
         confetti({
             particleCount: 100,
             spread: 70,
             origin: {
-                x: e.pageX / window.innerWidth,
-                y: e.pageY / window.innerHeight
+                x: e.screenX / window.innerWidth,
+                y: e.screenY / window.outerHeight
             }
         });
     });
