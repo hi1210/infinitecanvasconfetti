@@ -1,0 +1,23 @@
+{
+  "name": "infinitecanvasconfetti",
+  "version": "1.0.0",
+  "description": "Tampermonkey script to add extra canvas confetti",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hi1210/infinitecanvasconfetti.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hi1210/infinitecanvasconfetti/issues"
+  },
+  "homepage": "https://github.com/hi1210/infinitecanvasconfetti#readme",
+  "dependencies": {
+    "canvas-confetti": "^1.7.0",
+    "node": "^20.7.0"
+  }
+}
